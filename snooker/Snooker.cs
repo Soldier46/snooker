@@ -29,7 +29,11 @@ namespace snooker
                 összeg += v.Nyeremény;
             }
             átlag = (double)összeg / versenyzők.Count;
-            Console.WriteLine($"3.feladat A versenyzők átlagosan {átlag:0.00} fontot kerestek");
+            Console.WriteLine($"4.feladat A versenyzők átlagosan {átlag:0.00} fontot kerestek");
+
+
+            //4.
+            Console.WriteLine($"4b.feladat A versenyzők átlagosan {versenyzők.Average(x => x.Nyeremény):0.00} fontot kerestek");
         }
     }
 }
