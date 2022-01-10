@@ -20,6 +20,16 @@ namespace snooker
             // Console.WriteLine(versenyzők[0].Név);
             //3.fealadat
             Console.WriteLine($"3.feladat: A világranglistán {versenyzők.Count} versenyző szerepel.");
+
+            //4.feladat
+            double átlag;
+            int összeg = 0;
+            foreach (var v in versenyzők)
+            {
+                összeg += v.Nyeremény;
+            }
+            átlag = (double)összeg / versenyzők.Count;
+            Console.WriteLine($"3.feladat A versenyzők átlagosan {átlag:0.00} fontot kerestek");
         }
     }
 }
