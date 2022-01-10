@@ -17,7 +17,9 @@ namespace snooker
             {
                 versenyzők.Add(new Versenyző(sor));
             }
-            Console.WriteLine(versenyzők[0].Név);
+            // Console.WriteLine(versenyzők[0].Név);
+            //3.fealadat
+            Console.WriteLine($"3.feladat: A világranglistán {versenyzők.Count} versenyző szerepel.");
         }
     }
 }
