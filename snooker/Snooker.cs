@@ -76,6 +76,41 @@ namespace snooker
                 }
             }
             Console.WriteLine($"6.feladat: A versenyzok kozott{(vanNorvég ? "van" : "nincs")} van e norveg versenyzo");
+
+            //7.a
+            Dictionary<string, int> Stat = new Dictionary<string, int>();
+            //Elem (Kulcs-érték pár) hozzáadása
+            //Stat.Add("Kína", 20);
+
+            //egy elem létezésének vizsgálata ez 
+  //          Stat.ContainsKey("Kína")
+
+                //egy adott kulcshoz tartozó érték használata
+                // Stat["Kína"] = 20;
+                //   Stat["Kína"]++;
+            foreach (var v in versenyzők)
+            {
+                if (Stat.ContainsKey(v.Ország))
+                {
+                    Stat[v.Ország]++;
+                }
+                else
+                {
+                    Stat.Add(v.Ország, 1);
+                }
+
+            }
+            Console.WriteLine($"7.feladat: Statisztika");
+            foreach (var s in Stat)
+            {
+                if (s.Value>4)
+                {
+                    Console.WriteLine($"\t{s.Key} - {s.Value} fő");
+                }
+            }
+            //7.b
+            versenyzők
+                .
         }
     }
 }
