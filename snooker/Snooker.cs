@@ -65,7 +65,17 @@ namespace snooker
             Console.WriteLine($"\tOrszág: {maxV.Ország}");
             Console.WriteLine($"\tNyeremény: {(maxV.Nyeremény * 380).ToString("C0")} ");
 
+            //6.a
 
+            bool vanNorvég = false;
+            foreach (var v in versenyzők)
+            {
+                if (v.Ország == "Norvégia")
+                {
+                    vanNorvég = true;
+                }
+            }
+            Console.WriteLine($"6.feladat: A versenyzok kozott{(vanNorvég ? "van" : "nincs")} van e norveg versenyzo");
         }
     }
 }
