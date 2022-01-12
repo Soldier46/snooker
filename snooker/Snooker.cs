@@ -110,7 +110,11 @@ namespace snooker
             }
             //7.b
             versenyzők
-                .
+                .GroupBy(v => v.Ország)
+                .Select(g => new { Ország = g.Key, darab = g.Count() })
+                .Where(x => x.darab > 4)
+                .ToList()
+                .ForEach(x => Console.WriteLine($"\t{x.Ország}- {x.darab}fő"));
         }
     }
 }
